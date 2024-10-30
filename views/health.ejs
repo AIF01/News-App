@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./components/head.ejs') %>
+<body>
+    <%- include('./components/nav.ejs') %>
+
+    <h1 class="heading">HEALTH HEADLINES</h1>
+    <% if (articles.length > 0) { %>
+        <% articles.forEach(item => { %>
+            <% if (item.title !== "[Removed]") { %>
+                <div class="block">
+                        <a href="<%= item.url %>">
+                            <h2><%= item.title %></h2>
+                            <h4><%= item.description %></h4>
+                            <p class="content">
+                                <!-- <img src="<%= item.urlToImage %>" alt="img"> -->
+                                <!-- <%= item.description %> -->
+                            </p>
+                        <!-- <p>Date Posted: <%= item.date %></p> -->
+                            <p>Author: <%= item.author %></p>
+                        </a>
+                </div>
+            <% } %>
+        <% }) %>
+    <% } else { %>
+        <p>There are no blogs to display...</p>
+       
+    <% } %>
+    <%- include('./components/footer.ejs') %>
+</body>
+</html>

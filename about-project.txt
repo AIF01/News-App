@@ -1,0 +1,1 @@
+This is a simple site that displays top headlines daily and users who desire to make their own posts on the site can register at the bottom and after being vetted and considered as qualified according to the moderator's requirements would recieve a link in their emails to register as admin with read and write privileges.    
